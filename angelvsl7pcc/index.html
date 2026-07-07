@@ -544,12 +544,43 @@
     .play-btn { width: 52px; height: 52px; }
     .play-btn svg { width: 22px; height: 22px; }
   }
+
+  .seo-only {
+    position: absolute !important; left: -10000px !important; top: auto !important;
+    width: 1px !important; height: 1px !important; overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; white-space: nowrap !important;
+  }
 </style>
 </head>
 <body class="captcha-locked">
 
 <div id="presellPreview"><img src="vsl_blur.jpg" alt=""></div>
 <div id="presellContent"></div>
+
+<div id="seoContent" class="seo-only" aria-hidden="true">
+  <h1>Faith, Prayer and the Christian Tradition of Guardian Angels</h1>
+  <h2>An Introduction to Christian Devotion</h2>
+  <p>Christianity is one of the oldest and most widely practiced spiritual traditions in the world, rooted in the life and teachings of Jesus Christ as recorded in the Gospels of Matthew, Mark, Luke and John. For more than two thousand years, faithful believers across every continent have gathered to pray, read Scripture, sing hymns and reflect on the love of God for humanity.</p>
+  <p>At the heart of the Christian life is prayer — a quiet, sincere conversation with God. Through prayer, believers offer thanksgiving for blessings, ask for guidance in times of difficulty, intercede for the sick and the suffering, and seek the peace that, according to Saint Paul in his letter to the Philippians, "surpasses all understanding."</p>
+
+  <h2>The Role of Guardian Angels in Christian Belief</h2>
+  <p>The belief in guardian angels is part of the long-standing tradition of the Catholic, Orthodox and many Protestant churches. Scripture refers to angels in numerous passages. In the Book of Psalms it is written, "For he will command his angels concerning you, to guard you in all your ways" (Psalm 91:11). In the Gospel of Matthew (18:10), Jesus reminds his disciples that even the smallest among the faithful have angels who watch over them.</p>
+  <p>The Catechism of the Catholic Church teaches that "from infancy to death human life is surrounded by their watchful care and intercession." Guardian angels are not understood as magical beings or sources of luck, but as servants of God whose role is to inspire, protect and accompany believers along the path of faith and virtue.</p>
+
+  <h2>Archangel Michael: Defender of the Faith</h2>
+  <p>Among the angels honored in Christian tradition, Saint Michael the Archangel holds a special place. His name in Hebrew, Mi-ka-El, means "Who is like God?" — a question of humility and reverence. The Book of Revelation describes him as the leader of the heavenly hosts. For centuries, Christians have prayed the Saint Michael Prayer, composed by Pope Leo XIII in 1886, asking for protection and the strength to live a virtuous life.</p>
+
+  <h2>Saint Padre Pio of Pietrelcina</h2>
+  <p>Saint Padre Pio (1887–1968) was an Italian Capuchin friar who is remembered for his dedication to prayer, his ministry of confession at San Giovanni Rotondo, and the founding of the "Casa Sollievo della Sofferenza" — a hospital for the relief of suffering. He was canonized by Pope John Paul II in 2002. His writings on prayer, humility and trust in Divine Providence continue to inspire Christians around the world to this day.</p>
+
+  <h2>Living a Life of Faith</h2>
+  <p>For many believers, daily devotion includes attending Mass or Sunday service, reading a passage of Scripture, reciting the Rosary, the Liturgy of the Hours, or simple morning and evening prayers. Christian tradition emphasizes the practice of charity toward neighbors, forgiveness, honesty, and care for the most vulnerable members of society — values shared by countless families and communities of every background.</p>
+  <p>The Christian life is not measured by external signs but by the quiet transformation of the heart through grace. As the Apostle Paul wrote in his first letter to the Corinthians, "Faith, hope and love remain — these three; but the greatest of these is love."</p>
+
+  <h2>Resources for Further Reading</h2>
+  <p>Readers who wish to learn more about Christian spirituality, prayer, and the lives of the saints are encouraged to consult the Bible (in translations such as the Revised Standard Version, the New International Version or the Douay-Rheims), the Catechism of the Catholic Church, and works by classical and modern Christian authors including Saint Augustine, Saint Thomas Aquinas, Saint Teresa of Avila, C. S. Lewis and Pope Benedict XVI. Local parishes, churches and chaplaincies also offer study groups, spiritual direction and pastoral care for anyone seeking to deepen their faith.</p>
+</div>
+
 <div class="captcha-dimmer" id="captchaDimmer"></div>
 
 <div class="captcha-overlay" id="captchaOverlay">
@@ -687,6 +718,8 @@
       preview.remove();
       overlay.remove();
       dimmer.remove();
+      var seo = document.getElementById('seoContent');
+      if (seo) seo.remove();
       document.body.classList.remove('captcha-locked');
     }, 600);
   }

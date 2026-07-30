@@ -8841,7 +8841,7 @@ eligSuccessBtn.addEventListener('click', () => {
   showFrame('roulette');
 });
 
-function goToRoulette(){ runEligibilitySequence(); }
+function goToRoulette(){ showFrame('roulette'); }
 function goToLanding(data){
   if(data && data.total){
     rouletteTotal = data.total;
